@@ -1,4 +1,10 @@
-FROM ghcr.io/runatlantis/atlantis:v0.28.1
+FROM golang:1.22.3-alpine3.20 as hcloud-builder
+
+ARG HCLOUD_CLI_VERSION="v1.43.1"
+
+RUN GOBIN=/usr/local/bin/ go install github.com/hetznercloud/cli/cmd/hcloud@${HCLOUD_CLI_VERSION}
+
+FROM ghcr.io/runatlantis/atlantis:v0.28.1 as final
 
 USER root
 
@@ -10,3 +16,5 @@ RUN apk add --no-cache py3-pip && \
     apk del .azure-cli-deps;
 
 USER atlantis
+
+COPY --from=hcloud-builder /usr/local/bin/hcloud /usr/bin/hcloud
