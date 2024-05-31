@@ -3,4 +3,82 @@ name: build-image
 on:
   push:
     branches:
-      - "main"
+      - "**"
+    tags:
+      - v*.*.*
+
+env:
+  REGISTRY: docker.io
+  REGISTRY_USER: ${{ secrets.DOCKERHUB_USERNAME }}
+  REGISTRY_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
+  IMAGE_NAME: atlantis
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        platform: [linux/amd64, linux/arm64]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: cache podman storage
+        uses: actions/cache@v4.0.2
+        with:
+          path: ~/.local/share/containers/storage
+          key: podman-storage-${{ matrix.platform }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3.0.0
+
+      - name: export architecture name (removing os prefix)
+        run: |
+          echo "PODMAN_ARCH=${PLATFORM#*/}" >>${GITHUB_ENV}
+        env:
+          PLATFORM: ${{ matrix.platform }}
+
+      - uses: docker/metadata-action@v5
+        id: meta
+        name: Set image metadata
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.REGISTRY_USER }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=sha,format=long
+          flavor: |
+            suffix=-${{ env.PODMAN_ARCH }}
+
+      - name: Build Image
+        id: build-image
+        uses: redhat-actions/buildah-build@v2
+        with:
+          image: ${{ env.IMAGE_NAME }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          oci: true
+          containerfiles: |
+            ./Dockerfile
+          platforms: ${{ matrix.platform }}
+
+      - name: Copy image to file
+        run: |
+          skopeo copy containers-storage:${{ env.REGISTRY }}/${{ env.REGISTRY_USER }}/${{ env.IMAGE_NAME }}:sha-${{ github.sha }}-${{ env.PODMAN_ARCH }} \
+            oci-archive:/tmp/${{ github.sha }}-${{ env.PODMAN_ARCH }}-oci.tar
+
+      - name: Upload digest
+        uses: actions/upload-artifact@v4.3.3
+        with:
+          name: ${{ github.sha }}-${{ env.PODMAN_ARCH }}
+          path: /tmp/${{ github.sha }}-${{ env.PODMAN_ARCH }}-oci.tar
+          if-no-files-found: error
+          retention-days: 1
+
+  publish:
+    runs-on: ubuntu-22.04
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: softprops/action-gh-release@v2.0.5
+        name: Create release
+        with:
+          token: ${{ secrets.RELEASE_TOKEN }}

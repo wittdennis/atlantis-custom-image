@@ -1,0 +1,71 @@
+name: release-image
+
+on:
+  release:
+    types: [published]
+
+env:
+  REGISTRY: docker.io
+  REGISTRY_USER: ${{ secrets.DOCKERHUB_USERNAME }}
+  REGISTRY_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
+  IMAGE_NAME: atlantis
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/download-artifact@v4.1.7
+        name: Download amd64 image
+        with:
+          name: ${{ github.sha }}-amd64
+          path: /tmp
+      - uses: actions/download-artifact@v4.1.7
+        name: Download arm64 image
+        with:
+          name: ${{ github.sha }}-arm64
+          path: /tmp
+
+      - uses: docker/metadata-action@v5
+        id: meta
+        name: Set image metadata
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.REGISTRY_USER }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=schedule
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=ref,event=branch
+            type=sha
+          flavor: |
+            latest=true
+
+      - name: Create manifest
+        run: |
+          podman manifest create ${REGISTRY}/${IMAGE_NAME}:manifest
+          podman manifest add ${REGISTRY}/${IMAGE_NAME}:manifest oci-archive:/tmp/${COMMIT_SHA}-amd64-oci.tar
+          podman manifest add ${REGISTRY}/${IMAGE_NAME}:manifest oci-archive:/tmp/${COMMIT_SHA}-arm64-oci.tar
+
+          podman tag ${REGISTRY}/${IMAGE_NAME}:manifest $(echo "${{ steps.meta.outputs.tags }}" | tr '\n' ' ')
+        env:
+          REGISTRY: ${{ env.REGISTRY }}/${{ env.REGISTRY_USER }}
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+          COMMIT_SHA: ${{ github.sha }}
+
+      - uses: docker/login-action@v3.2.0
+        name: docker login
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - uses: redhat-actions/push-to-registry@v2.8
+        name: Push image
+        id: push
+        with:
+          image: ${{ env.IMAGE_NAME }}
+          tags: ${{ steps.meta.outputs.tags }}
+          registry: ${{ env.REGISTRY }}/${{ env.REGISTRY_USER }}
+
+      - name: Echo image url
+        run: |
+          echo "Image pushed to ${{ steps.push.outputs.registry-paths }}"
