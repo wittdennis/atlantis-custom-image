@@ -62,9 +62,7 @@ jobs:
         name: Push image
         id: push
         with:
-          image: ${{ env.IMAGE_NAME }}
           tags: ${{ steps.meta.outputs.tags }}
-          registry: ${{ env.REGISTRY }}/${{ env.REGISTRY_USER }}
 
       - name: Echo image url
         run: |
