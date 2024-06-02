@@ -14,16 +14,20 @@ jobs:
   release:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/download-artifact@v4.1.7
+      - uses: dawidd6/action-download-artifact@v3.1.4
         name: Download amd64 image
         with:
           name: ${{ github.sha }}-amd64
+          workflow: build.yaml
           path: /tmp
-      - uses: actions/download-artifact@v4.1.7
+          search_artifacts: true
+      - uses: dawidd6/action-download-artifact@v3.1.4
         name: Download arm64 image
         with:
           name: ${{ github.sha }}-arm64
+          workflow: build.yaml
           path: /tmp
+          search_artifacts: true
 
       - uses: docker/metadata-action@v5
         id: meta
