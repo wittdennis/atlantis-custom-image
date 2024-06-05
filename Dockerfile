@@ -1,4 +1,4 @@
-FROM golang:1.22.3-alpine3.20 as hcloud-builder
+FROM golang:1.22.4-alpine3.20 as hcloud-builder
 
 ARG HCLOUD_CLI_VERSION="v1.43.1"
 RUN GOBIN=/usr/local/bin/ go install github.com/hetznercloud/cli/cmd/hcloud@${HCLOUD_CLI_VERSION}
