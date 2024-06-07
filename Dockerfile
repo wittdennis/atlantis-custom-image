@@ -17,20 +17,22 @@ RUN apk add --no-cache py3-pip && \
     apk del .azure-cli-deps;
 
 ENV HASHICORP_PRODUCT="terraform"
-ARG VERSION="1.8.4"
+# renovate: datasource=github-releases depName=terraform packageName=hashicorp/terraform versioning=semver-coerced
+ARG TERRAFORM_VERSION="v1.8.4"
 RUN ARCH=amd64 && \
     if [ "$(uname -m)" = "aarch64" ]; then ARCH=arm64; fi && \
     apk add --update --virtual .deps --no-cache gnupg && \
     cd /tmp && \
-    wget https://releases.hashicorp.com/${HASHICORP_PRODUCT}/${VERSION}/${HASHICORP_PRODUCT}_${VERSION}_linux_${ARCH}.zip && \
-    wget https://releases.hashicorp.com/${HASHICORP_PRODUCT}/${VERSION}/${HASHICORP_PRODUCT}_${VERSION}_SHA256SUMS && \
-    wget https://releases.hashicorp.com/${HASHICORP_PRODUCT}/${VERSION}/${HASHICORP_PRODUCT}_${VERSION}_SHA256SUMS.sig && \
+    TERRAFORM_VERSION=${TERRAFORM_VERSION#"v"} && \
+    wget https://releases.hashicorp.com/${HASHICORP_PRODUCT}/${TERRAFORM_VERSION}/${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_linux_${ARCH}.zip && \
+    wget https://releases.hashicorp.com/${HASHICORP_PRODUCT}/${TERRAFORM_VERSION}/${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_SHA256SUMS && \
+    wget https://releases.hashicorp.com/${HASHICORP_PRODUCT}/${TERRAFORM_VERSION}/${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_SHA256SUMS.sig && \
     wget -qO- https://www.hashicorp.com/.well-known/pgp-key.txt | gpg --import && \
-    gpg --verify ${HASHICORP_PRODUCT}_${VERSION}_SHA256SUMS.sig ${HASHICORP_PRODUCT}_${VERSION}_SHA256SUMS && \
-    grep ${HASHICORP_PRODUCT}_${VERSION}_linux_${ARCH}.zip ${HASHICORP_PRODUCT}_${VERSION}_SHA256SUMS | sha256sum -c && \
-    unzip /tmp/${HASHICORP_PRODUCT}_${VERSION}_linux_${ARCH}.zip -d /tmp && \
+    gpg --verify ${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_SHA256SUMS.sig ${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_SHA256SUMS && \
+    grep ${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_linux_${ARCH}.zip ${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_SHA256SUMS | sha256sum -c && \
+    unzip /tmp/${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_linux_${ARCH}.zip -d /tmp && \
     mv /tmp/${HASHICORP_PRODUCT} /usr/bin/${HASHICORP_PRODUCT} && \
-    rm -f /tmp/${HASHICORP_PRODUCT}_${VERSION}_linux_${ARCH}.zip ${HASHICORP_PRODUCT}_${VERSION}_SHA256SUMS ${VERSION}/${HASHICORP_PRODUCT}_${VERSION}_SHA256SUMS.sig && \
+    rm -f /tmp/${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_linux_${ARCH}.zip ${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_SHA256SUMS ${TERRAFORM_VERSION}/${HASHICORP_PRODUCT}_${TERRAFORM_VERSION}_SHA256SUMS.sig && \
     apk del .deps
 
 USER atlantis
