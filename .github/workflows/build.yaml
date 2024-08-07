@@ -65,7 +65,7 @@ jobs:
             oci-archive:/tmp/${{ github.sha }}-${{ env.PODMAN_ARCH }}-oci.tar
 
       - name: Upload digest
-        uses: actions/upload-artifact@v4.3.5
+        uses: actions/upload-artifact@v4.3.6
         with:
           name: ${{ github.sha }}-${{ env.PODMAN_ARCH }}
           path: /tmp/${{ github.sha }}-${{ env.PODMAN_ARCH }}-oci.tar
