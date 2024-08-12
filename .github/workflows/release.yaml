@@ -24,6 +24,7 @@ jobs:
           release: true
           git-user: github-actions
           git-user-email: github-actions@github.com
+          check-latest-tag-only: true
 
       - name: generate changelog
         run: cog changelog --at ${{ steps.release.outputs.version }} > GITHUB_CHANGELOG.md
