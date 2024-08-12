@@ -1,73 +1,36 @@
-name: release-image
+name: github-release
 
 on:
-  release:
-    types: [published]
-
-env:
-  REGISTRY: docker.io
-  REGISTRY_USER: ${{ secrets.DOCKERHUB_USERNAME }}
-  REGISTRY_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
-  IMAGE_NAME: atlantis
+  workflow_dispatch:
 
 jobs:
   release:
     runs-on: ubuntu-22.04
     steps:
-      - uses: dawidd6/action-download-artifact@v3.1.4
-        name: Download amd64 image
+      - uses: actions/checkout@v4
         with:
-          name: ${{ github.sha }}-amd64
-          workflow: build.yaml
-          path: /tmp
-          search_artifacts: true
-      - uses: dawidd6/action-download-artifact@v3.1.4
-        name: Download arm64 image
-        with:
-          name: ${{ github.sha }}-arm64
-          workflow: build.yaml
-          path: /tmp
-          search_artifacts: true
+          fetch-depth: 0
+          token: ${{ secrets.RELEASE_TOKEN }}
 
-      - uses: docker/metadata-action@v5
-        id: meta
-        name: Set image metadata
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.REGISTRY_USER }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=schedule
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=ref,event=branch
-            type=sha
-          flavor: |
-            latest=true
-
-      - name: Create manifest
+      - name: setup git config
         run: |
-          podman manifest create ${REGISTRY}/${IMAGE_NAME}:manifest
-          podman manifest add ${REGISTRY}/${IMAGE_NAME}:manifest oci-archive:/tmp/${COMMIT_SHA}-amd64-oci.tar
-          podman manifest add ${REGISTRY}/${IMAGE_NAME}:manifest oci-archive:/tmp/${COMMIT_SHA}-arm64-oci.tar
+          git config user.name github-actions
+          git config user.email github-actions@github.com
 
-          podman tag ${REGISTRY}/${IMAGE_NAME}:manifest $(echo "${{ steps.meta.outputs.tags }}" | tr '\n' ' ')
-        env:
-          REGISTRY: ${{ env.REGISTRY }}/${{ env.REGISTRY_USER }}
-          IMAGE_NAME: ${{ env.IMAGE_NAME }}
-          COMMIT_SHA: ${{ github.sha }}
-
-      - uses: docker/login-action@v3.3.0
-        name: docker login
+      - name: bump version
+        id: release
+        uses: oknozor/cocogitto-action@v3.8
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          release: true
+          git-user: github-actions
+          git-user-email: github-actions@github.com
 
-      - uses: redhat-actions/push-to-registry@v2.8
-        name: Push image
-        id: push
+      - name: generate changelog
+        run: cog changelog --at ${{ steps.release.outputs.version }} > GITHUB_CHANGELOG.md
+
+      - uses: softprops/action-gh-release@v2.0.8
+        name: create release
         with:
-          tags: ${{ steps.meta.outputs.tags }}
-
-      - name: Echo image url
-        run: |
-          echo "Image pushed to ${{ steps.push.outputs.registry-paths }}"
+          body_path: GITHUB_CHANGELOG.md
+          tag_name: ${{ steps.release.outputs.version }}
+          token: ${{ secrets.RELEASE_TOKEN }}
