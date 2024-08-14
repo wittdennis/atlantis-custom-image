@@ -1,4 +1,4 @@
-FROM golang:1.22.6-alpine3.20 as hcloud-builder
+FROM golang:1.23.0-alpine3.20 as hcloud-builder
 
 # renovate: datasource=github-releases depName=hcloud packageName=hetznercloud/cli versioning=semver-coerced
 ARG HCLOUD_CLI_VERSION=v1.46.0
