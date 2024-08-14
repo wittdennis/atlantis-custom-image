@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.5](https://github.com/wittdennis/atlantis-custom-image/compare/576c8f0059be05df9177322d032726ebdad8ae9b..1.1.5) - 2024-08-14
+#### Bug Fixes
+- **(deps)** update golang docker tag to v1.23.0 - ([b84984d](https://github.com/wittdennis/atlantis-custom-image/commit/b84984dac9e0184424397001131509dae467c8a2)) - wittdennis-renovate[bot]
+#### Miscellaneous Chores
+- fix renovate config - ([576c8f0](https://github.com/wittdennis/atlantis-custom-image/commit/576c8f0059be05df9177322d032726ebdad8ae9b)) - Dennis Witt
+
+- - -
+
 ## [1.1.4](https://github.com/wittdennis/atlantis-custom-image/compare/cfc2b70d847adbd81427e7eb3878f114fefd60c3..1.1.4) - 2024-08-12
 #### Bug Fixes
 - set semantic commit type for renovate - ([84b424b](https://github.com/wittdennis/atlantis-custom-image/commit/84b424b91d4fd8373f495f46c0b4c1891da62f81)) - Dennis Witt
