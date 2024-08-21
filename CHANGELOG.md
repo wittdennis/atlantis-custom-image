@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.6](https://github.com/wittdennis/atlantis-custom-image/compare/cbfc80f0f7fa4e4c92447b35ecec8ab27c3a3aef..1.1.6) - 2024-08-21
+#### Bug Fixes
+- **(deps)** update dependency terraform to v1.9.5 - ([cbfc80f](https://github.com/wittdennis/atlantis-custom-image/commit/cbfc80f0f7fa4e4c92447b35ecec8ab27c3a3aef)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.5](https://github.com/wittdennis/atlantis-custom-image/compare/576c8f0059be05df9177322d032726ebdad8ae9b..1.1.5) - 2024-08-14
 #### Bug Fixes
 - **(deps)** update golang docker tag to v1.23.0 - ([b84984d](https://github.com/wittdennis/atlantis-custom-image/commit/b84984dac9e0184424397001131509dae467c8a2)) - wittdennis-renovate[bot]
