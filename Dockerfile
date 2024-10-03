@@ -18,7 +18,7 @@ RUN apk add --no-cache py3-pip && \
 
 ENV HASHICORP_PRODUCT="terraform"
 # renovate: datasource=github-releases depName=terraform packageName=hashicorp/terraform versioning=semver-coerced
-ARG TERRAFORM_VERSION=v1.9.6
+ARG TERRAFORM_VERSION=v1.9.7
 RUN ARCH=amd64 && \
     if [ "$(uname -m)" = "aarch64" ]; then ARCH=arm64; fi && \
     apk add --update --virtual .deps --no-cache gnupg && \
