@@ -2,6 +2,16 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.16](https://github.com/wittdennis/atlantis-custom-image/compare/6590272daabd576f9a653817328412a5e5caa6fd..1.1.16) - 2024-11-09
+#### Bug Fixes
+- **(deps)** update dependency hcloud to v1.49.0 - ([4947a0b](https://github.com/wittdennis/atlantis-custom-image/commit/4947a0b7437dc01b8524f5525a383502bf64cd56)) - wittdennis-renovate[bot]
+- **(deps)** update golang docker tag to v1.23.3 - ([bd900cb](https://github.com/wittdennis/atlantis-custom-image/commit/bd900cbdc06f6502ef508316e137b62905372a1d)) - wittdennis-renovate[bot]
+#### Continuous Integration
+- **(deps)** update oknozor/cocogitto-action action to v3.9 - ([9823af6](https://github.com/wittdennis/atlantis-custom-image/commit/9823af6696473ccdcdc8aeb9bda2e534b815c118)) - wittdennis-renovate[bot]
+- **(deps)** update softprops/action-gh-release action to v2.0.9 - ([6590272](https://github.com/wittdennis/atlantis-custom-image/commit/6590272daabd576f9a653817328412a5e5caa6fd)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.15](https://github.com/wittdennis/atlantis-custom-image/compare/bf8607623824c62640dc52b114c2c0d908e4290f..1.1.15) - 2024-10-26
 #### Bug Fixes
 - **(deps)** update dependency hcloud to v1.48.0 - ([bf86076](https://github.com/wittdennis/atlantis-custom-image/commit/bf8607623824c62640dc52b114c2c0d908e4290f)) - wittdennis-renovate[bot]
