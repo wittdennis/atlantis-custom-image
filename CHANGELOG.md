@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.18](https://github.com/wittdennis/atlantis-custom-image/compare/8f33d736597e275a476241a721652b85940cf42d..1.1.18) - 2024-11-19
+#### Bug Fixes
+- **(deps)** update dependency azure-cli to v2.67.0 - ([f643a6e](https://github.com/wittdennis/atlantis-custom-image/commit/f643a6e2373be72ac484cf9eda51f3306cd296c6)) - wittdennis-renovate[bot]
+#### Continuous Integration
+- **(deps)** update softprops/action-gh-release action to v2.1.0 - ([8f33d73](https://github.com/wittdennis/atlantis-custom-image/commit/8f33d736597e275a476241a721652b85940cf42d)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.17](https://github.com/wittdennis/atlantis-custom-image/compare/5a8288f653f4de18192b7184a6e9a893135db054..1.1.17) - 2024-11-11
 #### Bug Fixes
 - **(deps)** update dependency azure-cli to v2.66.0 - ([5a8288f](https://github.com/wittdennis/atlantis-custom-image/commit/5a8288f653f4de18192b7184a6e9a893135db054)) - wittdennis-renovate[bot]
