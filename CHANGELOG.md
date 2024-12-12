@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.22](https://github.com/wittdennis/atlantis-custom-image/compare/10b421828e2ddba55e5447fefd12d385cc17024b..1.1.22) - 2024-12-12
+#### Bug Fixes
+- **(deps)** update dependency terraform to v1.10.2 - ([6dd5100](https://github.com/wittdennis/atlantis-custom-image/commit/6dd5100f1e829c9f1d3611885c1acf53fecb2cca)) - wittdennis-renovate[bot]
+#### Continuous Integration
+- **(deps)** update softprops/action-gh-release action to v2.2.0 - ([10b4218](https://github.com/wittdennis/atlantis-custom-image/commit/10b421828e2ddba55e5447fefd12d385cc17024b)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.21](https://github.com/wittdennis/atlantis-custom-image/compare/02a15def52acb6d99dea8f1e384e50afcd78cc28..1.1.21) - 2024-12-07
 #### Bug Fixes
 - **(deps)** update dependency terraform to v1.10.1 - ([7673777](https://github.com/wittdennis/atlantis-custom-image/commit/7673777fffd87ca995ac3b39f346279c11d54e85)) - wittdennis-renovate[bot]
