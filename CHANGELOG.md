@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.24](https://github.com/wittdennis/atlantis-custom-image/compare/bb51f8fcdee21669f032acb58f5b80b7051bff10..1.1.24) - 2024-12-20
+#### Bug Fixes
+- **(deps)** update ghcr.io/runatlantis/atlantis docker tag to v0.32.0 - ([bb51f8f](https://github.com/wittdennis/atlantis-custom-image/commit/bb51f8fcdee21669f032acb58f5b80b7051bff10)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.23](https://github.com/wittdennis/atlantis-custom-image/compare/bd8a3f65d6a497dfdf9e1930464e9f6efef65067..1.1.23) - 2024-12-18
 #### Bug Fixes
 - **(deps)** update dependency terraform to v1.10.3 - ([bd8a3f6](https://github.com/wittdennis/atlantis-custom-image/commit/bd8a3f65d6a497dfdf9e1930464e9f6efef65067)) - wittdennis-renovate[bot]
