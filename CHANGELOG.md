@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.33](https://github.com/wittdennis/atlantis-custom-image/compare/f395d11c47800c75c2306cb01dbb0c538749ee2e..1.1.33) - 2025-03-05
+#### Bug Fixes
+- **(deps)** update dependency terraform to v1.11.1 - ([97f78a5](https://github.com/wittdennis/atlantis-custom-image/commit/97f78a55402368e0f53ca798930a26f6e8353466)) - wittdennis-renovate[bot]
+- **(deps)** update golang docker tag to v1.24.1 - ([f395d11](https://github.com/wittdennis/atlantis-custom-image/commit/f395d11c47800c75c2306cb01dbb0c538749ee2e)) - wittdennis-renovate[bot]
+#### Continuous Integration
+- **(deps)** update wittdennis/pipelines action to v1.11.0 - ([de457ff](https://github.com/wittdennis/atlantis-custom-image/commit/de457ffdd62ae76ab03a2179289a6d3ba67b995e)) - wittdennis-renovate[bot]
+- add hadolint job - ([47e28c3](https://github.com/wittdennis/atlantis-custom-image/commit/47e28c30b84606b893a96d754b48c2d334009f8e)) - Dennis Witt
+#### Miscellaneous Chores
+- fix hadolint issues - ([b0d77ab](https://github.com/wittdennis/atlantis-custom-image/commit/b0d77ab92b16e051422cbda5c7842db555520f3f)) - Dennis Witt
+
+- - -
+
 ## [1.1.32](https://github.com/wittdennis/atlantis-custom-image/compare/9dca93446b0e82bee58e5c76638317f1de3f5ce9..1.1.32) - 2025-03-04
 #### Bug Fixes
 - **(deps)** update dependency azure-cli to v2.70.0 - ([9d25170](https://github.com/wittdennis/atlantis-custom-image/commit/9d251708790c4669a1aa96be9372409f29dbae64)) - wittdennis-renovate[bot]
