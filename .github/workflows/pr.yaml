@@ -7,7 +7,7 @@ jobs:
     uses: wittdennis/pipelines/.github/workflows/hadolint.yaml@1.11.0
 
   build:
-    uses: wittdennis/pipelines/.github/workflows/container-image-build.yaml@1.10.2
+    uses: wittdennis/pipelines/.github/workflows/container-image-build.yaml@1.11.0
     needs:
       - hadolint
     with:
