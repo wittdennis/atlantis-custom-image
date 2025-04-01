@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.36](https://github.com/wittdennis/atlantis-custom-image/compare/9195fe556ad1c4e61ff4e82c25baba74b2c7c59c..1.1.36) - 2025-04-01
+#### Bug Fixes
+- **(deps)** update dependency azure-cli to v2.71.0 - ([d6c2e51](https://github.com/wittdennis/atlantis-custom-image/commit/d6c2e51e4a8434749fb9a5c0733c64d620081626)) - wittdennis-renovate[bot]
+#### Continuous Integration
+- **(deps)** update wittdennis/pipelines action to v1.11.8 - ([54e8df6](https://github.com/wittdennis/atlantis-custom-image/commit/54e8df6cb20a863d7a8d7f25ba3dddddb751eb98)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.7 - ([9195fe5](https://github.com/wittdennis/atlantis-custom-image/commit/9195fe556ad1c4e61ff4e82c25baba74b2c7c59c)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.35](https://github.com/wittdennis/atlantis-custom-image/compare/070d7981f321ba721e03a495ac10275c4b59e399..1.1.35) - 2025-03-26
 #### Bug Fixes
 - **(deps)** update dependency terraform to v1.11.3 - ([40d8d08](https://github.com/wittdennis/atlantis-custom-image/commit/40d8d0854954fa0722f3f4fa49247c0a67291454)) - wittdennis-renovate[bot]
