@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.44](https://github.com/wittdennis/atlantis-custom-image/compare/39284ece53ef1e3b4ea74daad27adde6cefa0c58..1.1.44) - 2025-06-03
+#### Bug Fixes
+- **(deps)** update dependency azure-cli to v2.74.0 - ([39284ec](https://github.com/wittdennis/atlantis-custom-image/commit/39284ece53ef1e3b4ea74daad27adde6cefa0c58)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.43](https://github.com/wittdennis/atlantis-custom-image/compare/ae1142c545f0e970032d387ea011b73680ca795a..1.1.43) - 2025-05-30
 #### Bug Fixes
 - **(deps)** update dependency hcloud to v1.51.0 - ([4da2376](https://github.com/wittdennis/atlantis-custom-image/commit/4da2376eff72bb91e983f1f0cf00e862a05dd175)) - wittdennis-renovate[bot]
