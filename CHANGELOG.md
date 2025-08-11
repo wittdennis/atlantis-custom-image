@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.49](https://github.com/wittdennis/atlantis-custom-image/compare/0a53f6638569c333696a811f1c51925144557583..1.1.49) - 2025-08-11
+#### Bug Fixes
+- **(deps)** update dependency azure-cli to v2.76.0 - ([0903062](https://github.com/wittdennis/atlantis-custom-image/commit/09030623ee14576e11d057e1c309e4c60596bced)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.31 - ([ac79c3f](https://github.com/wittdennis/atlantis-custom-image/commit/ac79c3f5e7f499d9255b79138ec10a29e264aa63)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.30 - ([c8efe31](https://github.com/wittdennis/atlantis-custom-image/commit/c8efe31fc0e2847b1a243e202946cd9be38285d8)) - wittdennis-renovate[bot]
+- **(deps)** update wittdennis/pipelines action to v1.11.29 - ([0a53f66](https://github.com/wittdennis/atlantis-custom-image/commit/0a53f6638569c333696a811f1c51925144557583)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.48](https://github.com/wittdennis/atlantis-custom-image/compare/ab4b3c153e25f24fd7643bc6258ed08a6aaf14f8..1.1.48) - 2025-07-31
 #### Bug Fixes
 - **(deps)** update ghcr.io/runatlantis/atlantis docker tag to v0.35.1 - ([d6f288a](https://github.com/wittdennis/atlantis-custom-image/commit/d6f288add9c68b962c15634db45cf8f683a96c08)) - wittdennis-renovate[bot]
