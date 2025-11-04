@@ -9,7 +9,7 @@ FROM ghcr.io/runatlantis/atlantis:v0.36.0 as final
 USER root
 
 # renovate: datasource=pypi depName=azure-cli packageName=azure-cli versioning=semever
-ARG AZURE_CLI_VERSION=2.78.0
+ARG AZURE_CLI_VERSION=2.79.0
 # hadolint ignore=DL3018,DL3013
 RUN apk add --no-cache py3-pip && \
     apk add --no-cache --virtual .azure-cli-deps gcc musl-dev python3-dev libffi-dev openssl-dev cargo make && \
