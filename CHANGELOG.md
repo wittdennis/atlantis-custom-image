@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.60](https://github.com/wittdennis/atlantis-custom-image/compare/44e7ad1a03d2975a2bccb4c5ed45962d9bf2c66a..1.1.60) - 2025-11-04
+#### Bug Fixes
+- (**deps**) update dependency azure-cli to v2.79.0 - ([27e99b9](https://github.com/wittdennis/atlantis-custom-image/commit/27e99b9e90b450b67c8db4eeeaf6fcd74f35428c)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.5 - ([4d67a2c](https://github.com/wittdennis/atlantis-custom-image/commit/4d67a2c086cc3151c867a5ac57c6e390c4ef4d72)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.4 - ([b89bf79](https://github.com/wittdennis/atlantis-custom-image/commit/b89bf79ee814627756c1fa8a4876b31f212f8e63)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.3 - ([c4ebc2a](https://github.com/wittdennis/atlantis-custom-image/commit/c4ebc2aaf101d5e840bdf94f04f7eb5011b98703)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.2 - ([d105b8a](https://github.com/wittdennis/atlantis-custom-image/commit/d105b8a307950550efa58811c649699d1b69f63c)) - wittdennis-renovate[bot]
+- (**deps**) update dependency hcloud to v1.55.0 - ([71f9587](https://github.com/wittdennis/atlantis-custom-image/commit/71f95875f1889efc42dd87776c9729f2c7ab0cd9)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.12.1 - ([44e7ad1](https://github.com/wittdennis/atlantis-custom-image/commit/44e7ad1a03d2975a2bccb4c5ed45962d9bf2c66a)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.59](https://github.com/wittdennis/atlantis-custom-image/compare/f80bfd39a4ed3c65c7d45eaedde85824a60a76e8..1.1.59) - 2025-10-16
 #### Bug Fixes
 - **(deps)** update dependency terraform to v1.13.4 - ([f80bfd3](https://github.com/wittdennis/atlantis-custom-image/commit/f80bfd39a4ed3c65c7d45eaedde85824a60a76e8)) - wittdennis-renovate[bot]
