@@ -20,7 +20,7 @@ RUN apk add --no-cache py3-pip && \
 
 ENV HASHICORP_PRODUCT="terraform"
 # renovate: datasource=github-releases depName=terraform packageName=hashicorp/terraform versioning=semver-coerced
-ARG TERRAFORM_VERSION=v1.14.2
+ARG TERRAFORM_VERSION=v1.14.3
 # hadolint ignore=DL3018,DL3003,DL4006,DL3013
 RUN ARCH="amd64" && \
     if [ "$(uname -m)" = "aarch64" ]; then ARCH="arm64"; fi && \
