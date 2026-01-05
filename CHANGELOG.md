@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.71](https://github.com/wittdennis/atlantis-custom-image/compare/9c205abd3b0594e4a8de91ee30ae9c8caf3685de..1.1.71) - 2026-01-05
+#### Bug Fixes
+- (**deps**) update dependency hcloud to v1.59.0 - ([9c205ab](https://github.com/wittdennis/atlantis-custom-image/commit/9c205abd3b0594e4a8de91ee30ae9c8caf3685de)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.70](https://github.com/wittdennis/atlantis-custom-image/compare/38828c85149626d89d1e8e3e8e18d7b750acf5fd..1.1.70) - 2025-12-31
 #### Bug Fixes
 - (**deps**) update ghcr.io/runatlantis/atlantis docker tag to v0.39.0 - ([54438a2](https://github.com/wittdennis/atlantis-custom-image/commit/54438a29120b453d766618f550e726212d6df581)) - wittdennis-renovate[bot]
