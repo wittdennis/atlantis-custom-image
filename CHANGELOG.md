@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.80](https://github.com/wittdennis/atlantis-custom-image/compare/a25fa561938758af098374d6aecd2f57cc55d680..1.1.80) - 2026-03-11
+#### Bug Fixes
+- (**deps**) update dependency terraform to v1.14.7 - ([79d7b20](https://github.com/wittdennis/atlantis-custom-image/commit/79d7b2090b619c9d43914e5d50f1a4b1354a4a16)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.20 - ([3291992](https://github.com/wittdennis/atlantis-custom-image/commit/32919925b75476438ecc179c767b6abfc36e9b6c)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.19 - ([ebdef2c](https://github.com/wittdennis/atlantis-custom-image/commit/ebdef2cb4c937743ee35002c74066e9bbeafe3b8)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.18 - ([789b0e4](https://github.com/wittdennis/atlantis-custom-image/commit/789b0e418fd8aca50b028c3400190e1f98e86cdd)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.17 - ([8bf1fea](https://github.com/wittdennis/atlantis-custom-image/commit/8bf1fea4c8b944e8235bc391e4e4a3026856d632)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.16 - ([850c996](https://github.com/wittdennis/atlantis-custom-image/commit/850c9963c8aca6a4da1b483bea2f8406d40fa696)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.14 - ([a25fa56](https://github.com/wittdennis/atlantis-custom-image/commit/a25fa561938758af098374d6aecd2f57cc55d680)) - wittdennis-renovate[bot]
+#### Continuous Integration
+- fix monorepo setting for cog - ([a670d48](https://github.com/wittdennis/atlantis-custom-image/commit/a670d486a495656cca1df304fc8ba5c70ae48671)) - Dennis Witt
+
+- - -
+
 ## [1.1.79](https://github.com/wittdennis/atlantis-custom-image/compare/27ca95d2d8350c3d3735c0be4a2f603a51941603..1.1.79) - 2026-03-03
 #### Bug Fixes
 - (**deps**) update dependency azure-cli to v2.84.0 - ([9e39bd8](https://github.com/wittdennis/atlantis-custom-image/commit/9e39bd8493c659e43fd9368f2675ab8144231365)) - wittdennis-renovate[bot]
