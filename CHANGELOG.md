@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.81](https://github.com/wittdennis/atlantis-custom-image/compare/dc0dba601a221dbbcbe2b15768dad124ea7e78ec..1.1.81) - 2026-03-21
+#### Bug Fixes
+- (**deps**) update dependency hcloud to v1.62.0 - ([2b9cdd0](https://github.com/wittdennis/atlantis-custom-image/commit/2b9cdd02cf496ae2bd173841df99ebd8f7f262ef)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.25 - ([16c64ef](https://github.com/wittdennis/atlantis-custom-image/commit/16c64ef21f31af57fe8a33939316517b5ad41b50)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.24 - ([b644ac3](https://github.com/wittdennis/atlantis-custom-image/commit/b644ac366a94195f98af7822b15d81f741d873d7)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.22 - ([227399d](https://github.com/wittdennis/atlantis-custom-image/commit/227399d3c0214f3f49163c5197aff03159b18d51)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.21 - ([dc0dba6](https://github.com/wittdennis/atlantis-custom-image/commit/dc0dba601a221dbbcbe2b15768dad124ea7e78ec)) - wittdennis-renovate[bot]
+#### Miscellaneous Chores
+- (**deps**) update golang builder image - ([10a12bd](https://github.com/wittdennis/atlantis-custom-image/commit/10a12bd06db4ee5c30395495303afac8d20b5bd5)) - Dennis Witt
+
+- - -
+
 ## [1.1.80](https://github.com/wittdennis/atlantis-custom-image/compare/a25fa561938758af098374d6aecd2f57cc55d680..1.1.80) - 2026-03-11
 #### Bug Fixes
 - (**deps**) update dependency terraform to v1.14.7 - ([79d7b20](https://github.com/wittdennis/atlantis-custom-image/commit/79d7b2090b619c9d43914e5d50f1a4b1354a4a16)) - wittdennis-renovate[bot]
