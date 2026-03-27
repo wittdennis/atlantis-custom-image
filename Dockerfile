@@ -4,7 +4,7 @@ FROM golang:1.26.1 as hcloud-builder
 ARG HCLOUD_CLI_VERSION=v1.62.0
 RUN GOBIN=/usr/local/bin/ go install github.com/hetznercloud/cli/cmd/hcloud@${HCLOUD_CLI_VERSION}
 
-FROM ghcr.io/runatlantis/atlantis:v0.40.0 as final
+FROM ghcr.io/runatlantis/atlantis:v0.41.0 as final
 
 USER root
 
