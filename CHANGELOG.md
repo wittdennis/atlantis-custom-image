@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.82](https://github.com/wittdennis/atlantis-custom-image/compare/5eadec908de147f5ae3a094361d3bf3c32fd51e9..1.1.82) - 2026-03-27
+#### Bug Fixes
+- (**deps**) update ghcr.io/runatlantis/atlantis docker tag to v0.41.0 - ([bedef65](https://github.com/wittdennis/atlantis-custom-image/commit/bedef650fa40f602d10a204ace3f64176d806267)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2 - ([ea5b809](https://github.com/wittdennis/atlantis-custom-image/commit/ea5b80938dd1d840ac2d293981b95479b4e76ddb)) - wittdennis-renovate[bot]
+- (**deps**) update dependency terraform to v1.14.8 - ([44c7862](https://github.com/wittdennis/atlantis-custom-image/commit/44c7862e8360d3c0d4b3cdda541923714d217e7c)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v1.13.26 - ([5eadec9](https://github.com/wittdennis/atlantis-custom-image/commit/5eadec908de147f5ae3a094361d3bf3c32fd51e9)) - wittdennis-renovate[bot]
+#### Continuous Integration
+- publish to docker.io and ghcr - ([b562aea](https://github.com/wittdennis/atlantis-custom-image/commit/b562aea49613f51c4306ae84bd4de5fc78c2d395)) - Dennis Witt
+
+- - -
+
 ## [1.1.81](https://github.com/wittdennis/atlantis-custom-image/compare/dc0dba601a221dbbcbe2b15768dad124ea7e78ec..1.1.81) - 2026-03-21
 #### Bug Fixes
 - (**deps**) update dependency hcloud to v1.62.0 - ([2b9cdd0](https://github.com/wittdennis/atlantis-custom-image/commit/2b9cdd02cf496ae2bd173841df99ebd8f7f262ef)) - wittdennis-renovate[bot]
