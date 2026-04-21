@@ -2,6 +2,19 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.85](https://github.com/wittdennis/atlantis-custom-image/compare/6ce8b89f4a41816cf3f955fe250fded2550b2a25..1.1.85) - 2026-04-21
+#### Bug Fixes
+- (**deps**) update dependency terraform to v1.14.9 - ([a0328c1](https://github.com/wittdennis/atlantis-custom-image/commit/a0328c1ee5086d77a012decdf37f434444137f0b)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.10 - ([b93f520](https://github.com/wittdennis/atlantis-custom-image/commit/b93f520f16fff3b4cf5f450d7b2b07be6df79a6b)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.9 - ([a13dfc7](https://github.com/wittdennis/atlantis-custom-image/commit/a13dfc788a0a87c7e43e733a3e4a2213b0294e3f)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.8 - ([f3f97de](https://github.com/wittdennis/atlantis-custom-image/commit/f3f97de717d4d2782189d1dd05397250ad6a38d4)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.7 - ([51f259f](https://github.com/wittdennis/atlantis-custom-image/commit/51f259f15076ebe044f262f1a77bdbaaa13563df)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.6 - ([49da4a6](https://github.com/wittdennis/atlantis-custom-image/commit/49da4a61b9e04c8b523f191a1283ec731134abfb)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.5 - ([fd49a50](https://github.com/wittdennis/atlantis-custom-image/commit/fd49a502f8060bb883034824689f940da6528bd9)) - wittdennis-renovate[bot]
+- (**deps**) update golang docker tag to v1.26.2 - ([6ce8b89](https://github.com/wittdennis/atlantis-custom-image/commit/6ce8b89f4a41816cf3f955fe250fded2550b2a25)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.84](https://github.com/wittdennis/atlantis-custom-image/compare/74e72b4200ae11790f36716bbd87e630e013aab3..1.1.84) - 2026-04-07
 #### Bug Fixes
 - (**deps**) update dependency hcloud to v1.62.2 - ([74e72b4](https://github.com/wittdennis/atlantis-custom-image/commit/74e72b4200ae11790f36716bbd87e630e013aab3)) - wittdennis-renovate[bot]
