@@ -1,7 +1,7 @@
 FROM golang:1.26.2 as hcloud-builder
 
 # renovate: datasource=github-releases depName=hcloud packageName=hetznercloud/cli versioning=semver-coerced
-ARG HCLOUD_CLI_VERSION=v1.62.2
+ARG HCLOUD_CLI_VERSION=v1.63.0
 RUN GOBIN=/usr/local/bin/ go install github.com/hetznercloud/cli/cmd/hcloud@${HCLOUD_CLI_VERSION}
 
 FROM ghcr.io/runatlantis/atlantis:v0.42.0 as final
