@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.93](https://github.com/wittdennis/atlantis-custom-image/compare/0c1d8e3d69b47850d261712fdede9f1dfb198577..1.1.93) - 2026-05-20
+#### Bug Fixes
+- (**deps**) update dependency terraform to v1.15.4 - ([5f40600](https://github.com/wittdennis/atlantis-custom-image/commit/5f40600052fdf6becc35d2ec7ecc01aa1397c7b1)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.18 - ([3aab89f](https://github.com/wittdennis/atlantis-custom-image/commit/3aab89f2d91e64e5a52dbfba67df7f50cd57d4ff)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.17 - ([e87d7dc](https://github.com/wittdennis/atlantis-custom-image/commit/e87d7dc26ec2376f22a0dcc79e78b490e5429e34)) - wittdennis-renovate[bot]
+- (**deps**) update dependency terraform to v1.15.3 - ([5ac654c](https://github.com/wittdennis/atlantis-custom-image/commit/5ac654c8492108500324a998103b0f8a4df535dc)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.16 - ([145130b](https://github.com/wittdennis/atlantis-custom-image/commit/145130b52c1a52ca15495783d084ade0a6d167f3)) - wittdennis-renovate[bot]
+- (**deps**) update golang docker tag to v1.26.3 - ([b141a1b](https://github.com/wittdennis/atlantis-custom-image/commit/b141a1b0e7246ee8afbc052224b98040e02f827d)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.15 - ([0c1d8e3](https://github.com/wittdennis/atlantis-custom-image/commit/0c1d8e3d69b47850d261712fdede9f1dfb198577)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.92](https://github.com/wittdennis/atlantis-custom-image/compare/0160bcf0bd4d6bc7187142d3fb954a73a1f89ca5..1.1.92) - 2026-05-06
 #### Bug Fixes
 - (**deps**) update dependency terraform to v1.15.2 - ([0160bcf](https://github.com/wittdennis/atlantis-custom-image/commit/0160bcf0bd4d6bc7187142d3fb954a73a1f89ca5)) - wittdennis-renovate[bot]
