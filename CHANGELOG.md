@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.97](https://github.com/wittdennis/atlantis-custom-image/compare/4bb89cfdaa4e97622c767e2ba4df94aa32033c60..1.1.97) - 2026-06-11
+#### Bug Fixes
+- (**deps**) update terraform monorepo to v1.15.6 - ([c90beb4](https://github.com/wittdennis/atlantis-custom-image/commit/c90beb4d5116788cc470b925bed30022c4e04f57)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.24 - ([0b71b16](https://github.com/wittdennis/atlantis-custom-image/commit/0b71b1646cf1acd0c1bf87af73e97bbad47bdc05)) - wittdennis-renovate[bot]
+- (**deps**) update golang docker tag to v1.26.4 - ([e654566](https://github.com/wittdennis/atlantis-custom-image/commit/e654566e9c368b0334b2b76620662b9363971ef3)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.23 - ([4bb89cf](https://github.com/wittdennis/atlantis-custom-image/commit/4bb89cfdaa4e97622c767e2ba4df94aa32033c60)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.96](https://github.com/wittdennis/atlantis-custom-image/compare/e9359d43205789c0b405fd97e0e28ead011da977..1.1.96) - 2026-06-02
 #### Bug Fixes
 - (**deps**) update dependency azure-cli to v2.87.0 - ([884ec67](https://github.com/wittdennis/atlantis-custom-image/commit/884ec67a7a12539379b89215c594bc63362dcbfb)) - wittdennis-renovate[bot]
