@@ -4,10 +4,10 @@ on: [pull_request]
 
 jobs:
   hadolint:
-    uses: wittdennis/pipelines/.github/workflows/hadolint.yaml@ec4833e22f9ab030d5c1393bc538c7fbe41885b0 # 2.0.24
+    uses: wittdennis/pipelines/.github/workflows/hadolint.yaml@6b71882a90b71468a66605f934ef75a83bbe006b # 2.0.25
 
   build:
-    uses: wittdennis/pipelines/.github/workflows/container-image-build.yaml@ec4833e22f9ab030d5c1393bc538c7fbe41885b0 # 2.0.24
+    uses: wittdennis/pipelines/.github/workflows/container-image-build.yaml@6b71882a90b71468a66605f934ef75a83bbe006b # 2.0.25
     needs:
       - hadolint
     with:
