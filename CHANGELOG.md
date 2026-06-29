@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [1.1.101](https://github.com/wittdennis/atlantis-custom-image/compare/35e896af80e7f942f937dc843c5bf0cbdf823829..1.1.101) - 2026-06-29
+#### Bug Fixes
+- (**deps**) update ghcr.io/runatlantis/atlantis docker tag to v0.45.0 - ([a531d9e](https://github.com/wittdennis/atlantis-custom-image/commit/a531d9e173a677a4d2e7a739d03c6983a3ea27fe)) - wittdennis-renovate[bot]
+- (**deps**) update wittdennis/pipelines action to v2.0.29 - ([35e896a](https://github.com/wittdennis/atlantis-custom-image/commit/35e896af80e7f942f937dc843c5bf0cbdf823829)) - wittdennis-renovate[bot]
+
+- - -
+
 ## [1.1.100](https://github.com/wittdennis/atlantis-custom-image/compare/eadbf0ab3adcbc5186a477bf080ee30ab48ec97c..1.1.100) - 2026-06-26
 #### Bug Fixes
 - (**deps**) update ghcr.io/runatlantis/atlantis docker tag to v0.44.1 - ([eadbf0a](https://github.com/wittdennis/atlantis-custom-image/commit/eadbf0ab3adcbc5186a477bf080ee30ab48ec97c)) - wittdennis-renovate[bot]
